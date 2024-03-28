@@ -2,10 +2,16 @@ import React from 'react';
 import './LoginForm.css';
 import { FaUser, FaLock } from "react-icons/fa";
 
-const LoginForm = () => {
+const LoginForm = ({ onLogin }) => {
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    // Call the onLogin function passed from App.js
+    onLogin();
+  };
+
   return (
     <div className='wrapper'>
-        <form action="">
+        <form onSubmit={handleSubmit}>
             <h1>Login</h1>
             <div className="input-box">
                 <input type="text" placeholder='Username' required/>
@@ -30,4 +36,4 @@ const LoginForm = () => {
   )
 }
 
-export default LoginForm
+export default LoginForm;
