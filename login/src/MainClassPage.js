@@ -1,13 +1,5 @@
 import React from 'react';
-import ReactDOM from 'react-dom/client';
 import './MainClassPage.css'
-
-const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <MainClassPage />
-  </React.StrictMode>
-);
 
 function MainClassPage({ onLogout }) {
   const centerTitle = {
@@ -27,7 +19,7 @@ const buttonStyle = {
   height: '150px',
   borderRadius:'5%',
   fontSize: '15px',
-  fontFamily: 'Arial'
+  fontFamily: 'Arial',
 }
 
 const buttonContainerStyle = {
